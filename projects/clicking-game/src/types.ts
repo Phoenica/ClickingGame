@@ -1,5 +1,5 @@
 /**
- * Configuration for clicking game..
+ * Configuration for clicking game.
  */
 export interface ClickingGameConfiguration {
   /**
@@ -15,8 +15,12 @@ export interface ClickingGameConfiguration {
    */
   gravityStrength?: number;
   /**
-   *  How much resistance object will face, while sliding on ground. 0 - no resistance, 1 - object will be instantly.
+   *  How much resistance object will face, while sliding on ground. 0 - no resistance, 1 - object will be instantly stopped.
    */
   groundFriction?: number;
+  /**
+   *  How much speed ball is losing bouncing against the wall. 0 - no speed lost, 1 - 100% energy lost.
+   */
+  bounciness?: number;
 }
 
