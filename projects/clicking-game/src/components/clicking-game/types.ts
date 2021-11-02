@@ -6,13 +6,12 @@ export class Ball {
   radius: number;
   bounciness: number;
 
-  constructor(x: number, y: number, radius: number, dx = 0, dy = 0, bounciness = 0.8) {
+  constructor(x: number, y: number, radius: number, dx = 0, dy = 0) {
     this.x = x;
     this.y = y;
     this.radius = radius;
     this.dx = dx;
     this.dy = dy;
-    this.bounciness = bounciness;
   }
 
   draw(canvas: CanvasRenderingContext2D) {

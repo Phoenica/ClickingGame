@@ -1,3 +1,25 @@
 <ce-clicking-game
   [gameBoardConfiguration]="gameBoardConfiguration"
 ></ce-clicking-game>
+
+<div class="game-config">
+  <div>
+    <span>Friction: </span>
+    <input [value]="gameBoardConfiguration.groundFriction * 2000" type="range" min="0" max="100" (change)="onFrictionChange($event)">
+    {{ gameBoardConfiguration.groundFriction * 2000 }}
+  </div>
+
+  <div>
+    <span>Gravity: </span>
+    <input [value]="gameBoardConfiguration.gravityStrength * 100" type="range" min="0" max="100" (change)="onGravityChange($event)">
+    {{ gameBoardConfiguration.gravityStrength * 100 }}
+  </div>
+
+  <div>
+    <span>Bounciness: </span>
+    <input [value]="gameBoardConfiguration.bounciness * 100" type="range" min="0" max="100" (change)="onBouncinessChange($event)">
+    {{ gameBoardConfiguration.bounciness * 100 }}
+  </div>
+
+  <button (click)="resetSettings()">Reset</button>
+</div>
